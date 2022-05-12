@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: black;
+  color: rgb(28, 209, 164);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+button {
+  background-color: rgb(28, 209, 164); 
+  color: black; 
+  border: 2px solid rgb(28, 209, 164);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: rgb(28, 209, 164);
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+h1{
+  text-align: center;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 300;
+}
+.light-mode{
+  margin: auto;
+  width: 15%;
+  padding: 10px;
+}
+
+
+.text-xl {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.sub-text {
+  max-width: 850px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.dark-mode{
+  background-color: white;
+  color: rgb(28, 209, 164);
+}
+
+
+/* Categories */
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 90px 40px;
+}
+
+.categories .covers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.categories .covers > div {
+  height: 500px;
+  width: 300px;
+  position: relative;
+}
+
+.categories .cover-grad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      156.82deg,
+      rgba(0, 0, 0, 0.6) 4.58%,
+      rgba(0, 0, 0, 0) 69.61%
+    ),
+    linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, rgba(0, 0, 0, 0) 71.49%);
+}
+
+.categories .cover-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: left;
+}
+
+.categories .cover-1{
+  background: url("https://qartulad.ge/media/mamaDSpuwh4Fyq.jpg")
+    no-repeat center center / cover;
+    transition: 1s;
+    background-size: 120%;
+}
+.categories .cover-2 {
+  background: url("https://www.geomovie.ge/uploads/posts/2019-01/1547753150_214x321-6565.webp")
+    no-repeat center center / cover;
+    transition: 1s;
+    background-size: 107%;
+}
+.categories .cover-3 {
+  background: url("https://static.imovies.cc/m_posters/856/145281494378.jpg")
+    no-repeat center center / cover;
+    transition: 1s;
+    background-size: 113%;
+}
+.cover-1:hover {
+  background-size: 150%;
+  background-position: center;
+}
+.cover-2:hover{
+  background-size: 150%;
+  background-position: center;
+}
+.cover-3:hover{
+  background-size: 150%;
+  background-position: center;
+}
+
+/* Media Queries */
+
+@media (max-width: 1300px) {
+  .categories .covers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .categories .covers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .logo {
+    width: 200px;
+  }
+
+  .header .header-content {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .header .header-text-1 {
+    margin-bottom: 40px;
+  }
+
+  .header .header-text-2 {
+    display: none;
+  }
+  .sub-text {
+    font-size: 20px;
+  }
+
+  .categories .covers {
+    grid-template-columns: 1fr;
+  }
+
+}
